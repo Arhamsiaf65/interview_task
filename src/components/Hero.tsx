@@ -26,7 +26,7 @@ const Sticker = ({
 
 const Hero = () => {
     return (
-        <section className="relative  min-h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-32 overflow-hidden">
 
             {/* Main Content */}
             <div className="z-20 flex flex-col items-center max-w-4xl mx-auto mt-10">

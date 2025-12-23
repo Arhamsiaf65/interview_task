@@ -1,6 +1,8 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ExploreSetapp from './components/ExploreSetapp'
+import JourneySection from './components/JourneySection'
+import TestimonialCarousel from './components/TestimonialCarousel'
 import './App.css'
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <main>
         <Hero />
         <ExploreSetapp />
+        <JourneySection />
+        <TestimonialCarousel />
       </main>
     </div>
   )
