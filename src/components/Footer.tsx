@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Facebook, Twitter, Youtube, Instagram } from 'lucide-react';
 
 const Footer = () => {

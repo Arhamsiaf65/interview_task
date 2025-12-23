@@ -1,5 +1,4 @@
-import React from 'react';
-import { Apple, Play } from 'lucide-react'; // Simulating Google Play logo roughly if needed, or use image
+import { Apple } from 'lucide-react';
 
 const Sticker = ({
     text,
@@ -70,7 +69,7 @@ const Hero = () => {
 
 
 
-            {/* Top Left: WORK WITH PICS (Orange diamond) */}
+            {/* Top Left: WORK WITH PICS */}
             <Sticker
                 text={<span className="leading-tight rotate-40">WORK<br />WITH<br />PICS</span>}
                 rotation="-rotate-70"
@@ -116,7 +115,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Bottom-Bottom Left: STAY SECURE (White Square) */}
+            {/* Bottom-Bottom Left: STAY SECURE */}
             <Sticker
                 text={<span className="rotate-40 leading-tight">STAY SECURE</span>}
                 rotation="-rotate-70"
@@ -127,7 +126,7 @@ const Hero = () => {
             />
 
 
-            {/* Top Right: FIX WIFI (Yellow Rect) */}
+            {/* Top Right: FIX WIFI  */}
             <Sticker
                 text="FIX WIFI"
                 rotation="rotate-12"
@@ -136,7 +135,7 @@ const Hero = () => {
                 textColor="text-[#A54E34]"
             />
 
-            {/* Middle Right: PLAN YOUR DAY (Blue Square) */}
+            {/* Middle Right: PLAN YOUR DAY  */}
             <Sticker
                 text={<span className="leading-tight">PLAN<br />YOUR<br />DAY</span>}
                 rotation="-rotate-28"
@@ -170,7 +169,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Bottom Right: MANAGE YOUR MAC (Pink Pill) */}
+            {/* Bottom Right: MANAGE YOUR MAC */}
             <Sticker
                 text={<span className="leading-tight">MANAGE<br />YOUR MAC</span>}
                 rotation="rotate-12"
@@ -179,7 +178,7 @@ const Hero = () => {
                 textColor='text-[#844461]'
             />
 
-            {/* Bottom-Bottom Right: CODE EASIER (Orange Square) */}
+            {/* Bottom-Bottom Right: CODE EASIER  */}
             <Sticker
                 text={<span className="leading-tight">CODE<br />EASIER</span>}
                 rotation="-rotate-10"

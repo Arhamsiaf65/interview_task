@@ -1,4 +1,4 @@
-import React from 'react';
+
 import SectionHeader from './SectionHeader';
 import SectionFooter from './SectionFooter';
 

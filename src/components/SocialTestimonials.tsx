@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 interface SocialTestimonial {
