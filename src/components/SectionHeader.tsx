@@ -8,7 +8,7 @@ interface SectionHeaderProps {
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle, className = '' }) => {
     return (
-        <div className={`flex justify-between items-center mb-12 ${className}`}>
+        <div className={`flex  justify-between items-center mb-12 ${className}`}>
             <h2 className="text-2xl  font-bold text-white max-w-md">
                 {title}
             </h2>

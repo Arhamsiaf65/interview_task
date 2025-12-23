@@ -4,18 +4,31 @@ import SectionFooter from './SectionFooter';
 
 const ExploreSetapp = () => {
     return (
-        <section className="bg-[#1e1e24] py-20 px-32 border-t border-b border-gray-700">
+        <section className="bg-[#1e1e24] my-20 px-12 ">
             <div className="max-w-7xl mx-auto">
-                <SectionHeader
-                    title="What you get on Setapp."
-                    subtitle="With a single monthly subscription at $9.99, you get 240+ apps for your Mac."
-                />
+                <div className='border-t-1 pt-20  border-[#E5E5E5]'>
+                    <SectionHeader
+                        title="What you get on Setapp."
+                        subtitle="With a single monthly subscription at $9.99, you get 240+ apps for your Mac."
+                    />
+                </div>
+
 
                 {/* Feature Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
                     {/* Large Feature Card - Keep your Mac clean */}
-                    <div className="lg:col-span-2 bg-gradient-to-br from-[#E8A5C0] to-[#C98FB0] rounded-3xl p-8 overflow-hidden relative">
-                        <div className="flex items-start gap-6 mb-6">
+                    <div className="lg:col-span-2 bg-gradient-to-br from-[#E8A5C0] to-[#C98FB0] rounded-3xl overflow-hidden relative">
+                        {/* App Screenshot */}
+                        <div className="relative p-8 pb-0">
+                            <img
+                                src="/app_info_sction_img.png"
+                                alt="CleanMyMac Interface"
+                                className="w-full rounded-t-2xl"
+                            />
+                        </div>
+
+                        {/* Content at bottom */}
+                        <div className="flex items-start gap-6 p-8">
                             <div className="w-16 h-16 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
                                 <img src="/icon-cmm.png.png" alt="CleanMyMac" className="w-10 h-10" />
                             </div>
@@ -24,55 +37,54 @@ const ExploreSetapp = () => {
                                 <p className="text-[#7a3a5a] text-sm">Remove junk, scan for malware, wipe email attachments</p>
                             </div>
                         </div>
-
-                        {/* App Screenshot */}
-                        <div className="relative">
-                            <img
-                                src="/app_info_sction_img.png"
-                                alt="CleanMyMac Interface"
-                                className="w-full rounded-2xl shadow-2xl"
-                            />
-                        </div>
                     </div>
 
                     {/* Write Code Card */}
-                    <div className="bg-[#F5F1E8] rounded-3xl p-8 flex flex-col justify-between min-h-[400px]">
-                        <div className="flex items-start gap-4 mb-6">
-                            <div className="w-14 h-14 bg-[#5BA3E0] rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <img src="/icon-coderunner.png.png" alt="Code" className="w-8 h-8" />
-                            </div>
-                            <div>
+                    <div className="bg-[#F5F1E8] rounded-3xl overflow-hidden flex flex-col min-h-[250px]">
+                        {/* Image at top */}
+                        <div className="flex-1 p-8 pb-0">
+                            <img
+                                src="/coderunner.png.png"
+                                alt="Code Editor"
+                                className="w-full h-full object-cover rounded-t-xl"
+                            />
+                        </div>
+
+                        {/* Content at bottom */}
+                        <div className="p-8 flex flex-col items-start gap-4">
+                            {/* Icon in bordered box */}
+                            <img className="w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0 " src="/icon-coderunner.png.png" alt="Code" />
+                            {/* Text content */}
+                            <div className="flex-1">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Write code</h3>
                                 <p className="text-gray-600 text-sm">Create applications in more than 25 languages</p>
                             </div>
                         </div>
-
-                        <div className="mt-auto">
-                            <img
-                                src="/coderunner.png.png"
-                                alt="Code Editor"
-                                className="w-full rounded-xl shadow-lg"
-                            />
-                        </div>
                     </div>
 
                     {/* Join Meetings Card */}
-                    <div className="bg-[#4A6B8A] rounded-3xl p-8 flex flex-col justify-between min-h-[400px]">
-                        <div className="flex items-start gap-4 mb-6">
-                            <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <img src="/icon-meeter.png.png" alt="Meeter" className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-bold text-white mb-2">Join meetings in a click</h3>
-                                <p className="text-gray-300 text-sm">Quickly access links to your meetings from menu bar</p>
+                    <div className="bg-[#4A6B8A] rounded-3xl overflow-hidden flex flex-col min-h-[250px]">
+
+
+                        {/* Content at top */}
+                        <div className="p-8">
+                            <div className="flex flex-col items-start">
+                                <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                                    <img src="/icon-meeter.png.png" alt="Meeter" className="w-8 h-8" />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold text-white mb-2">Join meetings in a click</h3>
+                                    <p className="text-gray-300 text-sm">Quickly access links to your meetings from menu bar</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="mt-auto">
+                        {/* Image at bottom */}
+                        <div className="flex-1 p-8 pb-0">
                             <img
                                 src="/meeter.png.png"
                                 alt="Meeter App"
-                                className="w-full rounded-xl shadow-lg"
+                                className="w-full h-full object-cover rounded-t-xl"
                             />
                         </div>
                     </div>
@@ -80,7 +92,8 @@ const ExploreSetapp = () => {
 
                 <SectionFooter text="View all superpowers" />
 
-                <div className="mt-24">
+
+                <div className="border-b-1 pb-20  border-[#E5E5E5] mt-24">
                     <SectionHeader
                         title="Your Setapp journey."
                         subtitle="Type in your task into Setapp search and get instant app recommendations."

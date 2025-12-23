@@ -99,13 +99,13 @@ const SocialTestimonials = () => {
     );
 
     return (
-        <section className="bg-white py-20 px-32">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-white py-20 px-12">
+            <div className="max-w-7xl mx-auto relative">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-12">
                     <h2 className="text-4xl font-bold text-gray-900">Setapp in your words.</h2>
                     <div className="flex items-center gap-6">
-                        <p className="text-gray-600">What you say about how Setapp powers you up.</p>
+                        <p className="text-gray-600 ">What you say about how Setapp powers you up.</p>
 
                         {/* Social Media Icons */}
                         <div className="flex gap-3">
@@ -123,28 +123,33 @@ const SocialTestimonials = () => {
                             </a>
                         </div>
 
-                        {/* Navigation Arrows */}
-                        <div className="flex gap-2">
-                            <button
-                                onClick={handlePrev}
-                                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
-                                aria-label="Previous testimonials"
-                            >
-                                <ChevronLeft className="w-5 h-5 text-gray-600" />
-                            </button>
-                            <button
-                                onClick={handleNext}
-                                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
-                                aria-label="Next testimonials"
-                            >
-                                <ChevronRight className="w-5 h-5 text-gray-600" />
-                            </button>
-                        </div>
+
                     </div>
                 </div>
 
+
+                {/* Navigation Arrows */}
+                <div className="flex gap-2 absolute right-0 top-15">
+                    <button
+                        onClick={handlePrev}
+                        className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                        aria-label="Previous testimonials"
+                    >
+                        <ChevronLeft className="w-5 h-5 text-gray-600" />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="w-10 h-10  rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                        aria-label="Next testimonials"
+                    >
+                        <ChevronRight className="w-5 h-5 text-gray-600" />
+                    </button>
+                </div>
+
+
+
                 {/* Testimonial Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-18 mb-8">
                     {visibleTestimonials.map((testimonial) => (
                         <div
                             key={testimonial.id}
@@ -174,8 +179,8 @@ const SocialTestimonials = () => {
                             key={index}
                             onClick={() => handleDotClick(index)}
                             className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
-                                    ? 'bg-gray-900 w-8'
-                                    : 'bg-gray-400 hover:bg-gray-600'
+                                ? 'bg-gray-900 w-8'
+                                : 'bg-gray-400 hover:bg-gray-600'
                                 }`}
                             aria-label={`Go to page ${index + 1}`}
                         />

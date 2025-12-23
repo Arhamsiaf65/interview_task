@@ -58,7 +58,7 @@ const TestimonialCarousel = () => {
     const currentTestimonial = testimonials[currentIndex];
 
     return (
-        <section className=" py-20 px-32">
+        <section className=" py-20 px-12">
             <div className="max-w-7xl mx-auto">
                 <div className="relative bg-[#765070]  rounded-3xl overflow-hidden min-h-[400px] flex items-center">
                     {/* Content */}

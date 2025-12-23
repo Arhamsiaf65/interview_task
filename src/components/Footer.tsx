@@ -3,7 +3,7 @@ import { ArrowRight, Facebook, Twitter, Youtube, Instagram } from 'lucide-react'
 
 const Footer = () => {
     return (
-        <footer className="bg-[#2a2a2e] text-white py-16 px-32">
+        <footer className="bg-[#2B2D32] text-white py-16 px-12">
             <div className="max-w-7xl mx-auto">
                 {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
