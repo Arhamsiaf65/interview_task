@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center py-5 px-6 max-w-7xl mx-auto w-full font-sans">
       {/* Logo Area */}
-      <div className="flex items-center cursor-pointer mr-8 sm:mr-16">
+      <div className="flex items-center gap-2 cursor-pointer mr-8 sm:mr-16">
         {/* Setapp Logo: 4 diamonds */}
         <div className="grid grid-cols-2 gap-[2px] transform rotate-0">
           {/* Top Row */}
@@ -14,6 +14,7 @@ const Header = () => {
           <div className="w-1.5 h-1.5 bg-[#dcb689] transform rotate-45 mt-[1px]"></div>
           <div className="w-1.5 h-1.5 bg-[#dcb689] transform rotate-45 mt-[1px]"></div>
         </div>
+        <span className="text-white font-semibold text-sm tracking-wider">SETAPP</span>
       </div>
 
       {/* Navigation */}

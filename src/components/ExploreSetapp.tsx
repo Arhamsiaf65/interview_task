@@ -80,7 +80,6 @@ const ExploreSetapp = () => {
 
                 <SectionFooter text="View all superpowers" />
 
-                {/* Your Setapp Journey Section */}
                 <div className="mt-24">
                     <SectionHeader
                         title="Your Setapp journey."

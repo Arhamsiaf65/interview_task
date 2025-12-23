@@ -32,16 +32,11 @@ const Hero = () => {
             <div className="z-20 flex flex-col items-center max-w-4xl mx-auto mt-10">
                 {/* Central Logo Box */}
                 <div className="w-24 h-24 bg-black rounded-3xl flex items-center justify-center mb-10 shadow-2xl border border-gray-800">
-                    <div className="grid grid-cols-2 gap-1 transform rotate-45">
-                        <div className="w-3 h-3 bg-[#fde68a]"></div>
-                        <div className="w-3 h-3 bg-[#fde68a]"></div>
-                        <div className="w-3 h-3 bg-[#fde68a]"></div>
-                        <div className="w-3 h-3 bg-[#fde68a]"></div>
-                    </div>
+                    <img className='w-24 h-24 object-contain p-2' src="/setapp-logo.png" alt="" />
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-5xl md:text-5xl font-bold text-white tracking-tight mb-4">
+                <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight mb-4">
                     Dozens of apps.<br />
                     One subscription.<br />
                     $9.99
@@ -81,32 +76,45 @@ const Hero = () => {
                 rotation="-rotate-70"
                 colorClass="bg-[#F0AD84]"
                 textColor="text-[#A54E34]"
-                positionClass="top-20 left-10 w-25 h-25"
-                shapeClass="rounded-xl"
+                positionClass="top-20 left-20 w-25 h-25"
+                shapeClass="rounded-2xl"
             />
             {/* Small donut chart icon near Work with Pics */}
-            <div className="hidden lg:flex absolute top-38 left-10 w-8 h-8 bg-[#DF96AE] rounded-full items-center justify-center   z-20">
+            <div className="hidden lg:flex absolute top-40 left-20 w-8 h-8 bg-[#DF96AE] rounded-full items-center justify-center   z-20">
                 <div className="w-4 h-4  border-4 border-[#844461] border-t-transparent rounded-full"></div>
             </div>
 
 
-            {/* Middle Left: PDF • VPN • AD BLOCKER (Circle) */}
-            <Sticker
-                text={<span className="text-xs uppercase tracking-widest text-center">PDF •<br />VPN •<br />AD BLOCKER</span>}
-                rotation="rotate-12"
-                colorClass="bg-[#e2e8f0]"
-                positionClass="top-34 left-22 w-25 h-25"
-                shapeClass="rounded-full flex-col"
-            />
+            {/* Middle Left: PDF • VPN • AD BLOCKER (Circle with curved text) */}
+            <div className="absolute top-42 z-20 left-35 w-20 h-20 rotate-12">
+                <div className="relative w-full h-full bg-[#e2e8f0] rounded-full flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full -rotate-90">
+                        <defs>
+                            <path
+                                id="circlePath"
+                                d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                            />
+                        </defs>
+                        <text className="text-[16px] fill-[#4a5568] font-bold tracking-wider">
+                            <textPath href="#circlePath" startOffset="0%">
+                                • AD BLOCKER • PDF • VPN
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
 
-            {/* Bottom Left: BOOST TEAMWORK (Blue Hexagon-ish/Polygon) */}
-            <Sticker
-                text={<span className="">BOOST TEAMWORK</span>}
-                rotation="-rotate-6"
-                colorClass="bg-[#93c5fd]" // Light blue
-                positionClass="bottom-40 left-10 w-48 h-20"
-                shapeClass="rounded-full clip-polygon" // Need to approximate shape
-            />
+            {/* Bottom Left: BOOST TEAMWORK (Using stretched rectangle frame) */}
+            <div className="absolute bottom-40 left-10 -rotate-6 z-10">
+                <div className="relative w-56 h-20">
+                    <img src="/streched_rectangle_vector.png" alt="" className="absolute inset-0 w-full h-full object-fill" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-[#2c5282] font-bold text-base tracking-wide uppercase">
+                            BOOST TEAMWORK
+                        </span>
+                    </div>
+                </div>
+            </div>
 
             {/* Bottom-Bottom Left: STAY SECURE (White Square) */}
             <Sticker
@@ -114,53 +122,71 @@ const Hero = () => {
                 rotation="-rotate-70"
                 textColor="text-[#384C75]"
                 colorClass="bg-[#f1f5f9]"
-                positionClass="bottom-10 left-24 w-25 h-25"
-                shapeClass="rounded-xl"
+                positionClass="bottom-15 left-24 w-25 h-25"
+                shapeClass="rounded-2xl"
             />
 
 
             {/* Top Right: FIX WIFI (Yellow Rect) */}
             <Sticker
                 text="FIX WIFI"
-                rotation="rotate-6"
-                colorClass="bg-[#fde047]" // Yellow
-                positionClass="top-20 right-20 w-40 h-16"
+                rotation="rotate-12"
+                colorClass="bg-[#F6CF98]"
+                positionClass="top-25 right-25 w-32 h-14"
+                textColor="text-[#A54E34]"
             />
 
             {/* Middle Right: PLAN YOUR DAY (Blue Square) */}
             <Sticker
                 text={<span className="leading-tight">PLAN<br />YOUR<br />DAY</span>}
-                rotation="-rotate-6"
-                colorClass="bg-[#7dd3fc]" // Sky blue
-                positionClass="top-40 right-48 w-32 h-32"
-                shapeClass="rounded-2xl"
+                rotation="-rotate-28"
+                colorClass="bg-[#99D7F1]"
+                textColor="text-[#384C75]"
+                positionClass="top-35 right-45 w-22 h-22"
+                shapeClass="rounded-xl"
             />
 
-            {/* Middle Right: CONVERT TO JPG (White starburst) */}
-            {/* Using a simplified circle/star for now */}
-            <Sticker
-                text={<span className="text-[10px] uppercase">CONVERT<br />TO JPG<br />HEIC</span>}
-                rotation="rotate-12"
-                colorClass="bg-[#f0f9ff]" // White
-                positionClass="top-72 right-10 w-28 h-28"
-                shapeClass="rounded-full border-2 border-dashed border-gray-300"
-            />
+            {/* Middle Right: CONVERT TO JPG (Using round curl vector frame with curved text) */}
+            <div className="absolute top-72 right-10 w-28 h-28 rotate-12 z-20">
+                <div className="relative  w-full h-full">
+                    <img src="/round_curl_vector.png" alt="" className="absolute inset-0 w-full h-full object-contain" />
+
+                    {/* SVG for curved text */}
+                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
+                        <defs>
+                            <path
+                                id="curvedTextPath"
+                                d="M 50, 50 m -30, 0 a 30,30 0 1,1 60,0 a 30,30 0 1,1 -60,0"
+                            />
+                        </defs>
+                        <text className="text-[13px]  fill-[#4a5568] font-bold tracking-widest uppercase" transform="rotate(-90 50 50)">
+                            <textPath href="#curvedTextPath" startOffset="0%">
+                                CONVERT HEIC TO JPG
+                            </textPath>
+                        </text>
+                    </svg>
+
+
+                </div>
+            </div>
 
             {/* Bottom Right: MANAGE YOUR MAC (Pink Pill) */}
             <Sticker
                 text={<span className="leading-tight">MANAGE<br />YOUR MAC</span>}
-                rotation="-rotate-3"
-                colorClass="bg-[#f9a8d4]" // Pink
-                positionClass="bottom-48 right-16 w-48 h-24"
+                rotation="rotate-12"
+                colorClass="bg-[#DF96AE]" // Pink
+                positionClass="bottom-38 right-33 w-36 "
+                textColor='text-[#844461]'
             />
 
             {/* Bottom-Bottom Right: CODE EASIER (Orange Square) */}
             <Sticker
                 text={<span className="leading-tight">CODE<br />EASIER</span>}
-                rotation="rotate-6"
-                colorClass="bg-[#fdba74]" // Orange
-                positionClass="bottom-10 right-32 w-32 h-32"
+                rotation="-rotate-10"
+                colorClass="bg-[#fdba74]"
+                positionClass="bottom-15 right-32 w-22 h-22"
                 shapeClass="rounded-2xl"
+                textColor='text-[#A54E34]'
             />
 
         </section>

@@ -1,8 +1,10 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ExploreSetapp from './components/ExploreSetapp'
-import JourneySection from './components/JourneySection'
 import TestimonialCarousel from './components/TestimonialCarousel'
+import SocialTestimonials from './components/SocialTestimonials'
+import CTASection from './components/CTASection'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -12,9 +14,11 @@ function App() {
       <main>
         <Hero />
         <ExploreSetapp />
-        <JourneySection />
         <TestimonialCarousel />
+        <SocialTestimonials />
+        <CTASection />
       </main>
+      <Footer />
     </div>
   )
 }
