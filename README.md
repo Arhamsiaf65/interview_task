@@ -2,7 +2,7 @@
 
 A pixel-perfect recreation of the Setapp landing page built with React, TypeScript, Vite, and Tailwind CSS.
 
-## 🚀 Features
+##  Features
 
 - **Responsive Design** - Fully responsive layout optimized for all screen sizes
 - **Modern Stack** - Built with React 19, TypeScript, and Tailwind CSS 4
@@ -12,7 +12,7 @@ A pixel-perfect recreation of the Setapp landing page built with React, TypeScri
 - **Custom Animations** - Dynamic carousels and interactive elements
 - **SVG Graphics** - Custom shapes and curved text using SVG paths
 
-## 📦 Tech Stack
+##  Tech Stack
 
 - **React 19** - UI library
 - **TypeScript** - Type safety
@@ -36,7 +36,7 @@ npm run build
 npm run preview
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -55,7 +55,7 @@ src/
 └── main.tsx                    # App entry point
 ```
 
-## 🎨 Components Overview
+## Components Overview
 
 ### Header
 - Logo and navigation
@@ -107,7 +107,7 @@ npm run build
 # Upload the dist/ folder to your hosting provider
 ```
 
-## 📝 Development Notes
+##  Development Notes
 
 - Uses Tailwind CSS 4 with the new Vite plugin
 - Custom SVG paths for unique shapes and curved text
@@ -115,16 +115,16 @@ npm run build
 - State management with React hooks
 - TypeScript for type safety
 
-## 🐛 Known Issues
+##  Known Issues
 
 - Vercel deployment may require custom build configuration due to permissions
 - Solution: Uses `node node_modules/vite/bin/vite.js build` in vercel.json
 
-## 📄 License
+##  License
 
 This project is for interview purposes.
 
-## 🤝 Contributing
+##  Contributing
 
 This is a demonstration project. Feel free to fork and modify for your own use.
 
